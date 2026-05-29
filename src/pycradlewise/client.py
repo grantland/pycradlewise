@@ -343,6 +343,7 @@ def _process_day_metrics(
                     )
                 )
             if analytics.naps:
+                # The API returns naps in chronological order; the last one is most recent.
                 latest_nap = analytics.naps[-1]
                 analytics.last_nap_start = latest_nap.start_time
                 analytics.last_nap_end = latest_nap.end_time
