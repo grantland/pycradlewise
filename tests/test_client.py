@@ -1,14 +1,12 @@
 """Tests for pycradlewise.client."""
 
-import json
-from unittest.mock import AsyncMock, MagicMock, patch
+from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 from aioresponses import aioresponses
 from botocore.credentials import Credentials
 
 from pycradlewise.auth import CradlewiseAuth, CradlewiseCredentials
-from pycradlewise.bootstrap import AppConfig
 from pycradlewise.client import (
     CradlewiseClient,
     _process_day_metrics,

@@ -36,16 +36,6 @@ class TestCradlewiseAuth:
         mock_cognito = MagicMock()
         mock_cognito.id_token = "fake-id-token"
 
-        mock_creds = {
-            "IdentityId": "us-east-1:fake-identity",
-        }
-        mock_creds_response = {
-            "Credentials": {
-                "AccessKeyId": "AKID",
-                "SecretKey": "SECRET",
-                "SessionToken": "TOKEN",
-            }
-        }
 
         with patch.object(auth, "_cognito_auth", return_value=mock_cognito):
             with patch.object(auth, "_exchange_for_iam") as mock_exchange:

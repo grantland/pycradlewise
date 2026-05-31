@@ -115,9 +115,6 @@ asyncio.run(run())
 | `light_on` | `bool` | True if nightlight is active |
 | `light_intensity` | `int` | Nightlight brightness |
 | `temperature` | `float?`| Room temperature in Celsius |
-| `inside_sleep_schedule`| `bool` | True if within scheduled sleep times |
-| `inside_soothing_window`| `bool`| True if within soothing window |
-| `rocking_not_effective`| `bool`| True if rocking is not effective |
 
 **`SleepAnalytics`** — Aggregated sleep data:
 
